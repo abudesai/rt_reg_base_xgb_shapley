@@ -1,4 +1,4 @@
-XGB Regressor with Shapley explanations for Binary Classification - Base problem category as per Ready Tensor specifications.
+XGB Regressor with Shapley explanations for Regression - Base problem category as per Ready Tensor specifications.
 
 - xgb
 - shapley
