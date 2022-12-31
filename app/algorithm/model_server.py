@@ -118,13 +118,13 @@ class ModelServer:
             samle_expl_dict = {}
             samle_expl_dict[self.id_field_name] = ids[i]
             samle_expl_dict["predictions"] = pred_values[i]
-            samle_expl_dict["baseline_prob"] = shap_values.base_values[i]
+            samle_expl_dict["intercept"] = shap_values.base_values[i]
 
             feature_impacts = {}
             for f_num, feature in enumerate(shap_values.feature_names):
                 feature_impacts[feature] = round(shap_values.values[i][f_num], 4)
 
-            samle_expl_dict["feature_impacts"] = feature_impacts
+            samle_expl_dict["feature_scores"] = feature_impacts
             explanations.append(samle_expl_dict)
 
         # ------------------------------------------------------
